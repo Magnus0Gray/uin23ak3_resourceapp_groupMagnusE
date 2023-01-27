@@ -11,6 +11,10 @@
 # production
 /build
 
+#visual studio
+.vs/
+uin23ak3_resourceapp_groupMagnusE/.vs
+
 # misc
 .DS_Store
 .env.local
