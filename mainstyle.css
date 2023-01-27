@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;700&display=swap');
+
+:root {
+    --blue: #00DDDD;
+    --white: #FFFFFF;
+    --black: #000000;
+    --grey: #707070;
+    --lightgrey: #F0F0F0;
+    --maxwidth: 1200px;
+    --rootsize: 20px;
+}
+
+body 
+{
+    background-color: var(--white);
+    color: var(--grey);
+    font-family: Arial, sans-serif;
+    font-size: var(--rootsize);
+    margin-top: 1rem;
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+div.container {
+    width: 100%;
+    max-width: var(--maxwidth);
+    margin: 0 auto;
+    background-color: var(--white);
+}
+header 
+{
+    padding: 2rem;
+    border: 1px solid var(--grey);
+}
+
+header a 
+{
+    width: 100%;
+    max-width: 250px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--grey);
+}
+
+.categoryButton {
+    margin-top: 1rem;
+    margin-bottom: 0;
+    list-style-type: none;
+    font-weight: 100;
+    border-left: 1px solid var(--grey);
+    border-bottom: 0;
+    border-right: 1px solid var(--grey);
+    border-top: 1px solid var(--grey);
+    background-color: var(--lightgrey);
+    padding: 0.1rem 1rem;
+    width: auto;
+    max-width: 350px;
+    min-width: 100px;
+    display: inline-block;
+}
+
+.categoryButton h3 {
+    text-transform: uppercase;
+    color: var(--grey);
+}
+
+.categoryButtonSelected {
+    margin-top: 1rem;
+    margin-bottom: 0;
+    list-style-type: none;
+    font-weight: 100;
+    border: none;
+    background-color: var(--blue);
+    padding: 0.1rem 1rem;
+    width: auto;
+    max-width: 350px;
+    min-width: 100px;
+    display: inline-block;
+}
+
+.categoryButtonSelected h3 {
+    text-transform: uppercase;
+    color: var(--white);
+}
+
+.sources a
+{
+    color: var(--blue);
+}
+
+article 
+{
+    border-left: 1px solid var(--grey);
+    border-bottom: 1px solid var(--grey);
+    border-right: 1px solid var(--grey);
+    border-top: 0.5rem solid var(--blue);
+
+    padding: 2rem;
+}
+article h2 
+{
+
+    text-transform: uppercase;
+}
