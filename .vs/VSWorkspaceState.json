@@ -1,8 +1,11 @@
 {
   "ExpandedNodes": [
     "",
-    "\\resourceapp"
+    "\\resourceapp",
+    "\\resourceapp\\src",
+    "\\resourceapp\\src\\components",
+    "\\resourceapp\\src\\css"
   ],
-  "SelectedNode": "\\resourceapp\\.gitignore",
+  "SelectedNode": "\\resourceapp\\src\\setupTests.js",
   "PreviewInSolutionExplorer": false
 }
