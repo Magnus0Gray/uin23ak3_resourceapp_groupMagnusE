@@ -17,7 +17,7 @@
         "test": "react-scripts test",
         "eject": "react-scripts eject",
         "css:watch": "sass --watch sass/main.scss:css/main.css",
-        "css:compile": "sass sass/main.scss:css/main.css",
+        "css:compile": "sass sass/main.scss:src/css/main.css",
         "css:prefix": "postcss --use autoprefixer -b \"last 4 versions\" css/main.css -o css/main.css",
         "css:compress": "css-minify -f css/main.css -o css",
         "css:build": "npm-run-all css:compile css:prefix css:compress"
