@@ -1,7 +1,5 @@
-import logo from './logo.svg';
-//import './App.css';
 import './css/main.css';
-import genNav from './ressurser';
+import NavBar from './components/NavBar';
 
 function App() {
 	return (
@@ -12,9 +10,7 @@ function App() {
                     <h1>Ressursarkiv</h1>
                  </a>
             </header>
-                <nav id="navBar" >
-                    <genNav></genNav>
-            </nav>
+                <NavBar/>
             <main>
                 <article id="mainArticles">
     

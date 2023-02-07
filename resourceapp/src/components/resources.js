@@ -1,4 +1,4 @@
-const resources = [
+[
     {
         category: "HTML",
         text: "HTML står for HyperText Markup Language, og er et strukturspråk som brukes for å lage strukturer til nettside- og applikasjonsgrensesnitt.",
@@ -95,67 +95,3 @@ const resources = [
     },
 
 ]
-
-function genNav()
-{
-    console.log(resources)
-    let navHTML = ""
-    let classToUse
-
-    resources.map((titler, index) =>
-    {
-        if (index == 0)
-            classToUse = "categoryButtonSelected"
-        else
-            classToUse = "categoryButton"
-        navHTML +=
-
-        `
-            <button onclick="replaceContent(${index}, this, false)" class=${classToUse}>
-                <h3>${titler.category}</h3>
-            </button>`
-    })
-
-    document.querySelector("#navBar").innerHTML = navHTML
-    console.log(navHTML)
-
-    replaceContent(0, null, true)
-}
-
-function replaceContent(buttonID, buttonRef, isInit) {
-
-    if (isInit == false)
-    {
-
-        //console.log(buttonRef)
-        let clearselected, i
-
-        clearselected = document.getElementsByClassName("categoryButtonSelected")
-        for (i = 0; i < clearselected.length; ++i)
-            clearselected[i].setAttribute("class", "categoryButton")
-        // console.log(resources[buttonID])
-
-            buttonRef.setAttribute("class", "categoryButtonSelected")
-    }
-
-    //console.log(buttonStyleRef)
-
-    let contentHTML = ""
-    contentHTML += `<h2>${resources[buttonID].category}</h2>`
-    contentHTML += `<span class="articleText">${resources[buttonID].text}</span>`
-    contentHTML += `<section class=sources><ul></ul></section>`
-
-    document.querySelector("#mainArticles").innerHTML = contentHTML
-
-    
-    let listHTML = ""
-    resources[buttonID].sources.map(kilder => listHTML +=
-          `
-          <li>
-            <a href="${kilder.url}">
-                ${kilder.title}
-            </a>
-          </li>`)
-
-    document.querySelector("#mainArticles ul").innerHTML = listHTML
-}
