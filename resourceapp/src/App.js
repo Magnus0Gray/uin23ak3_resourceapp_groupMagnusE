@@ -3,8 +3,7 @@ import NavBar from './components/NavBar';
 
 function App() {
 	return (
-        <body>
-        <div class="container">
+        <div className="container">
             <header>
                 <a href="index.html">
                     <h1>Ressursarkiv</h1>
@@ -18,8 +17,7 @@ function App() {
             </main>
         </div>
             
-        <script src="components/ressurser.js"></script>
-    </body>
+        //<script src="components/ressurser.js"></script>
 	);
 }
 

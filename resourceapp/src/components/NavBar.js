@@ -1,41 +1,57 @@
-import data from './resources.js'
+import React from 'react'
 
-export default function NavBar() {
+import resources from './resources.json'
 
-    function genNav() {
-        console.log(data)
-        let navHTML = ""
 
-        navHTML = mapButtons();
 
-        document.querySelector("#navBar").innerHTML = navHTML
-        console.log(navHTML)
-
-        replaceContent(0, null, true)
+//export default function NavBar() {
+class NavBar extends React.Component {
+    constructor(props)
+    {
+        super(props);
+        this.replaceContent = this.replaceContent.bind(this);
     }
 
-    function mapButtons(){
+    componentDidMount() {
+        if (this.first) return; this.first = true;
+        //console.log(resources)
+
+        // navHTML = this.mapButtons();
+
         let navHTML = ""
         let classToUse
 
-        data.map((titler, index) => {
+        resources.map((titler, index) => {
             if (index === 0)
                 classToUse = "categoryButtonSelected"
             else
                 classToUse = "categoryButton"
-            navHTML +=
-
-                `
-            <button onclick="replaceContent(${index}, this, false)" class=${classToUse}>
+            // < button onClick = {()=> this.replaceContent(${ index }, this, false)} class= ${ classToUse } >
+            navHTML += `
+                <button buttonid="btn${index}" class=${classToUse} >
                 <h3>${titler.category}</h3>
-            </button>`
+            </button>
+                       `;
 
-            return navHTML
+
+            return true
         })
+        document.querySelector("#navBar").innerHTML = navHTML
+        //console.log(navHTML)
+
+        resources.map((titler, index) => {
+            const btn = document.querySelector(`[buttonid="btn${index}"]`);
+            console.log(btn)
+            if (btn)
+                btn.addEventListener('click', () => {this.replaceContent(index, btn, false)})
+        })
+
+        this.replaceContent(0, null, true)
     }
 
-    function replaceContent(buttonID, buttonRef, isInit) {
-
+    replaceContent(buttonID, buttonRef, isInit)
+    {
+        console.log("replace content ran")
         if (isInit === false) {
 
             //console.log(buttonRef)
@@ -44,7 +60,7 @@ export default function NavBar() {
             clearselected = document.getElementsByClassName("categoryButtonSelected")
             for (i = 0; i < clearselected.length; ++i)
                 clearselected[i].setAttribute("class", "categoryButton")
-            // console.log(data[buttonID])
+            // console.log(resources[buttonID])
 
             buttonRef.setAttribute("class", "categoryButtonSelected")
         }
@@ -52,15 +68,15 @@ export default function NavBar() {
         //console.log(buttonStyleRef)
 
         let contentHTML = ""
-        contentHTML += `<h2>${data[buttonID].category}</h2>`
-        contentHTML += `<span class="articleText">${data[buttonID].text}</span>`
+        contentHTML += `<h2>${resources[buttonID].category}</h2>`
+        contentHTML += `<span class="articleText">${resources[buttonID].text}</span>`
         contentHTML += `<section class=sources><ul></ul></section>`
 
         document.querySelector("#mainArticles").innerHTML = contentHTML
 
 
         let listHTML = ""
-        data[buttonID].sources.map(kilder => listHTML +=
+        resources[buttonID].sources.map(kilder => listHTML +=
             `
           <li>
             <a href="${kilder.url}">
@@ -71,5 +87,10 @@ export default function NavBar() {
         document.querySelector("#mainArticles ul").innerHTML = listHTML
     }
 
-    return <nav id="navBar" onLoad={genNav}></ nav>
-}
+    render() {
+        return <nav id="navBar"></nav>
+    }
+
+ };
+
+export default NavBar
