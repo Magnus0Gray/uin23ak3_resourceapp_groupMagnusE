@@ -32,6 +32,7 @@ header a {
 .categoryButton {
   margin-top: 1rem;
   margin-bottom: 0;
+  margin-right: 0.5rem;
   list-style-type: none;
   font-weight: 100;
   border-left: 1px solid #707070;
@@ -53,6 +54,7 @@ header a {
 .categoryButtonSelected {
   margin-top: 1rem;
   margin-bottom: 0;
+  margin-right: 0.5rem;
   list-style-type: none;
   font-weight: 100;
   border: none;

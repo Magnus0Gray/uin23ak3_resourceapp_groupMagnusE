@@ -1,23 +1,25 @@
 import './css/main.css';
-import NavBar from './components/NavBar';
+import { Route, Routes, Navigate } from 'react-router-dom';
+import NavBar from './components/NavBar'
+import PageContent from './components/PageContent'
 
 function App() {
+	const defaultpage = 0;
 	return (
-        <div className="container">
-            <header>
-                <a href="index.html">
-                    <h1>Ressursarkiv</h1>
-                 </a>
+		<div className="container">
+          <header>
+              <a href="index.html">
+                  <h1>Ressursarkiv</h1>
+              </a>
             </header>
-                <NavBar/>
-            <main>
-                <article id="mainArticles">
-    
-                </article>
-            </main>
-        </div>
-            
-        //<script src="components/ressurser.js"></script>
+            <NavBar/>
+            <Routes>
+                <Route path="/" element={<Navigate replace to="/HTML" />}/>
+                <Route index path=':category' element={<PageContent />} />
+            </Routes>
+
+       </div>
+
 	);
 }
 

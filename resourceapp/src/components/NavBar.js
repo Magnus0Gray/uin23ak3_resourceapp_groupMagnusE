@@ -1,11 +1,23 @@
-import React from 'react'
+import React from 'react';
+import NavBarButton from './NavBarButton';
+import resources from '../resources/ressurser';
+import { Link } from 'react-router-dom';
+//import resources from './resources.json'
 
-import resources from './resources.json'
 
 
-
-//export default function NavBar() {
-class NavBar extends React.Component {
+export default function NavBar() {
+    return (
+        <nav>
+            {resources.map((resource, index) => (
+                <Link key={index} to={resource.category}>
+                    <NavBarButton key={index} buttonlabel={resource.category} buttonID={index}/>
+               </Link>
+            ))}
+        </nav>
+    );
+}
+/*class NavBar extends React.Component {
     constructor(props)
     {
         super(props);
@@ -93,4 +105,4 @@ class NavBar extends React.Component {
 
  };
 
-export default NavBar
+export default NavBar */

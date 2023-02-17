@@ -3,7 +3,10 @@
     "version": "0.1.0",
     "private": true,
     "options": {
-        "allowedHosts": [ "localhost", ".localhost" ],
+        "allowedHosts": [
+            "localhost",
+            ".localhost"
+        ],
         "proxy": "https://localhost:5000/"
     },
     "dependencies": {
@@ -12,16 +15,16 @@
         "@testing-library/user-event": "^13.5.0",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
+        "react-router-dom": "^6.8.1",
         "react-scripts": "5.0.1",
         "web-vitals": "^2.1.4"
-
     },
     "scripts": {
         "start": "react-scripts start",
         "build": "react-scripts build",
         "test": "react-scripts test",
         "eject": "react-scripts eject",
-        "css:watch": "sass --watch sass/main.scss:css/main.css",
+        "css:watch": "sass --watch sass/main.scss:src/css/main.css",
         "css:compile": "sass sass/main.scss:src/css/main.css",
         "css:prefix": "postcss --use autoprefixer -b \"last 4 versions\" css/main.css -o css/main.css",
         "css:compress": "css-minify -f css/main.css -o css",

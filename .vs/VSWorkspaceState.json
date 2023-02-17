@@ -2,10 +2,11 @@
   "ExpandedNodes": [
     "",
     "\\resourceapp",
+    "\\resourceapp\\sass",
     "\\resourceapp\\src",
     "\\resourceapp\\src\\components",
-    "\\resourceapp\\src\\css"
+    "\\resourceapp\\src\\resources"
   ],
-  "SelectedNode": "\\resourceapp\\src\\setupTests.js",
+  "SelectedNode": "\\resourceapp\\src\\components\\NavBar.js",
   "PreviewInSolutionExplorer": false
 }
