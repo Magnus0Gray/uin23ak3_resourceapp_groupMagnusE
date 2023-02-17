@@ -96,6 +96,8 @@ const resources = [
 
 ]
 
+export default resources
+/*
 function genNav()
 {
     console.log(resources)
@@ -158,4 +160,4 @@ function replaceContent(buttonID, buttonRef, isInit) {
           </li>`)
 
     document.querySelector("#mainArticles ul").innerHTML = listHTML
-}
+}*/
