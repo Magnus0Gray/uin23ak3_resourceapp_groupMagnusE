@@ -29,7 +29,7 @@ header a {
   color: #707070;
 }
 
-.categoryButton {
+.categoryButton button, .categoryButtonSelected button {
   margin-top: 1rem;
   margin-bottom: 0;
   margin-right: 0.5rem;
@@ -46,27 +46,15 @@ header a {
   min-width: 100px;
   display: inline-block;
 }
-.categoryButton h3 {
+.categoryButton button h3, .categoryButtonSelected button h3 {
   text-transform: uppercase;
   color: #707070;
 }
 
-.categoryButtonSelected {
-  margin-top: 1rem;
-  margin-bottom: 0;
-  margin-right: 0.5rem;
-  list-style-type: none;
-  font-weight: 100;
-  border: none;
+.categoryButtonSelected button {
   background-color: #00DDDD;
-  padding: 0.1rem 1rem;
-  width: auto;
-  max-width: 350px;
-  min-width: 100px;
-  display: inline-block;
 }
-.categoryButtonSelected h3 {
-  text-transform: uppercase;
+.categoryButtonSelected button h3 {
   color: #FFFFFF;
 }
 

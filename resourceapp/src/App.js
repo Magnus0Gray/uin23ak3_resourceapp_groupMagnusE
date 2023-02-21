@@ -4,13 +4,11 @@ import NavBar from './components/NavBar'
 import PageContent from './components/PageContent'
 
 function App() {
-	const defaultpage = 0;
+	//const defaultpage = 0;
 	return (
 		<div className="container">
           <header>
-              <a href="index.html">
                   <h1>Ressursarkiv</h1>
-              </a>
             </header>
             <NavBar/>
             <Routes>

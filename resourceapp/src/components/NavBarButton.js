@@ -1,7 +1,9 @@
-import { useState } from "react";
+//import { useState } from "react";
+
+//*******ikke lenger i bruk, beholdes kun for referanse******
 
 export default function NavBarButton({ buttonlabel, buttonID }) {
-    const [selected, setSelected] = useState(false)
+    /*const [selected, setSelected] = useState(false)
 
     //const btnID = buttonID;
 
@@ -42,9 +44,9 @@ export default function NavBarButton({ buttonlabel, buttonID }) {
             <button onClick={Select} btnid={buttonID} className="categoryButton"> <h3>{buttonlabel}</h3></button>
            // <button onClick={Select} className={selected ? "categoryButtonSelected" : "categoryButton"}> <h3>{buttonlabel}</h3></button>
         )
-    }
+    }*/
 
-
+     return (<button  btnid = { buttonID } className = "categoryButton" > <h3>{buttonlabel}</h3></button >)
 
 }
 

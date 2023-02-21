@@ -41,46 +41,39 @@ header {
     }
 }
 
-.categoryButton {
-    margin-top: 1rem;
-    margin-bottom: 0;
-    margin-right: .5rem;
-    list-style-type: none;
-    font-weight: 100;
-    border-left: 1px solid $grey;
-    border-bottom: 0;
-    border-right: 1px solid $grey;
-    border-top: 1px solid $grey;
-    background-color: $lightgrey;
-    padding: 0.1rem 1rem;
-    width: auto;
-    max-width: 350px;
-    min-width: 100px;
-    display: inline-block;
+.categoryButton, .categoryButtonSelected {
+    button {
+        margin-top: 1rem;
+        margin-bottom: 0;
+        margin-right: .5rem;
+        list-style-type: none;
+        font-weight: 100;
+        border-left: 1px solid $grey;
+        border-bottom: 0;
+        border-right: 1px solid $grey;
+        border-top: 1px solid $grey;
+        background-color: $lightgrey;
+        padding: 0.1rem 1rem;
+        width: auto;
+        max-width: 350px;
+        min-width: 100px;
+        display: inline-block;
 
-    h3 {
-        text-transform: uppercase;
-        color: $grey;
+        h3 {
+            text-transform: uppercase;
+            color: $grey;
+        }
     }
 }
 
 .categoryButtonSelected {
-    margin-top: 1rem;
-    margin-bottom: 0;
-    margin-right: .5rem;
-    list-style-type: none;
-    font-weight: 100;
-    border: none;
-    background-color: $blue;
-    padding: 0.1rem 1rem;
-    width: auto;
-    max-width: 350px;
-    min-width: 100px;
-    display: inline-block;
+    button {
+        background-color: $blue;
 
-    h3 {
-        text-transform: uppercase;
-        color: $white;
+
+        h3 {
+            color: $white;
+        }
     }
 }
 

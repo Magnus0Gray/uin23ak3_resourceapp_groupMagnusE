@@ -1,7 +1,7 @@
 import React from 'react';
-import NavBarButton from './NavBarButton';
+//import NavBarButton from './NavBarButton';
 import resources from '../resources/ressurser';
-import { Link } from 'react-router-dom';
+import {NavLink } from 'react-router-dom';
 //import resources from './resources.json'
 
 
@@ -10,13 +10,17 @@ export default function NavBar() {
     return (
         <nav>
             {resources.map((resource, index) => (
-                <Link key={index} to={resource.category}>
-                    <NavBarButton key={index} buttonlabel={resource.category} buttonID={index}/>
-               </Link>
+
+                <NavLink className={({ isActive }) => (isActive ? 'categoryButtonSelected' : 'categoryButton')} key={index} to={resource.category}>
+                    <button><h3>{resource.category}</h3></button>
+                </NavLink>
             ))}
         </nav>
     );
 }
+
+//*** andre forsøk på løsninger *****
+//<NavBarButton key={index} buttonlabel={resource.category} buttonID={index} />
 /*class NavBar extends React.Component {
     constructor(props)
     {
